@@ -41,7 +41,7 @@ jobs:
         run: myst build --docx
       - name: Build HTML Assets
         run: myst build --html
-      - name: Copy DOCX files to HTML output (report_kk.docx + report.docx)
+      - name: Copy DOCX files to HTML output (report_kk.docx + report_ru.docx)
         run: |
           mkdir -p ./_build/html/exports
           for f in ./exports/report_kk.docx ./exports/report_ru.docx; do
