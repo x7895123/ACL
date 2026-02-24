@@ -36,7 +36,7 @@ jobs:
         with:
           node-version: 18.x
       - name: Install MyST
-        run: npm install -g mystmd
+        run: npm install -g mystmd@1.8.1
       - name: Build DOCX exports (KZ + RU)
         run: myst build --docx
       - name: Build HTML Assets
@@ -44,8 +44,13 @@ jobs:
       - name: Copy DOCX files to HTML output (report_kk.docx + report.docx)
         run: |
           mkdir -p ./_build/html/exports
-          cp -f ./exports/report_kk.docx ./_build/html/exports/
-          cp -f ./exports/report.docx ./_build/html/exports/
+          for f in ./exports/report_kk.docx ./exports/report.docx; do
+            if [ -f "$f" ]; then
+              cp -f "$f" ./_build/html/exports/
+            else
+              echo "WARNING: $f not found, skipping"
+            fi
+          done
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
