@@ -37,8 +37,14 @@ jobs:
           node-version: 18.x
       - name: Install MyST
         run: npm install -g mystmd
+      - name: Build DOCX export
+        run: myst build --docx
       - name: Build HTML Assets
         run: myst build --html
+      - name: Copy DOCX to HTML output
+        run: |
+          mkdir -p ./_build/html/exports
+          cp -f ./exports/*.docx ./_build/html/exports/ 2>/dev/null || true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

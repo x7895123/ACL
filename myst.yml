@@ -1,15 +1,35 @@
-# See docs at: https://mystmd.org/guide/frontmatter
+# MyST project configuration
 version: 1
+
 project:
-  id: 0dbd7de5-a28e-4f6a-8a98-22f060a848c3
-  title: АКТУАРНОЕ ЗАКЛЮЧЕНИЕ
-  # description:
-  # keywords: []
-  authors: [Vladimir Shevchenko]
-  github: https://github.com/x7895123/ACL
-  # To autogenerate a Table of Contents, run "myst init --write-toc"
+  id: acl-actuarial-report
+  title: Актуарлық қорытынды — Тасымалдаушының АҚЖ (Әуе көлігі)
+  short_title: Актуарлық қорытынды
+  description: >
+    Тасымалдаушының азаматтық-құқықтық жауапкершілігін міндетті сақтандыру жүйесін
+    реформалау кезінде тарификация әдіснамасын, ставкаларды саралау мен залалды
+    бағалауды негіздеу (Әуе көлігі)
+  authors:
+    - name: Мырзахмет Б.
+    - name: Шевченко В.
+  date: 2026-02-18
+  keywords:
+    - актуарлық қорытынды
+    - сақтандыру
+    - авиация
+    - тарификация
+  toc:
+    - file: report_kk.md
+    - file: report.md
+
 site:
+  title: Актуарлық қорытынды — Тасымалдаушының АҚЖ (Әуе көлігі)
   template: book-theme
-  # options:
-  #   favicon: favicon.ico
-  #   logo: site_logo.png
+  options:
+    logo: logo.png
+    favicon: logo.png
+    logo_text: Қазақстан Актуарийлер Палатасы / Казахстанская Палата Актуариев
+    style: myst-theme.css
+#  actions:
+#    - title: DOCX жүктеу (ҚАЗ)
+#      url: exports/report_kk.docx
