@@ -44,7 +44,7 @@ jobs:
       - name: Copy DOCX files to HTML output (report_kk.docx + report.docx)
         run: |
           mkdir -p ./_build/html/exports
-          for f in ./exports/report_kk.docx ./exports/report.docx; do
+          for f in ./exports/report_kk.docx ./exports/report_ru.docx; do
             if [ -f "$f" ]; then
               cp -f "$f" ./_build/html/exports/
             else

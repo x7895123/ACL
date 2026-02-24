@@ -20,7 +20,7 @@ project:
     - тарификация
   toc:
     - file: report_kk.md
-    - file: report.md
+    - file: report_ru.md
 
 site:
   title: Актуарлық қорытынды — Тасымалдаушының АҚЖ (Әуе көлігі)
