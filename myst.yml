@@ -26,9 +26,9 @@ site:
   title: Актуарлық қорытынды — Тасымалдаушының АҚЖ (Әуе көлігі)
   template: book-theme
   options:
-    logo: logo.png
-    favicon: logo.png
-    logo_text: Қазақстан Актуарийлер Палатасы / Казахстанская Палата Актуариев
+#    logo: logo.png
+#    favicon: logo.png
+    logo_text: Международный Актуарный Центр
     style: myst-theme.css
 #  actions:
 #    - title: DOCX жүктеу (ҚАЗ)
